@@ -1,0 +1,171 @@
+[gd_scene load_steps=18 format=3 uid="uid://ciyk00tyhec7v"]
+
+[ext_resource type="Script" uid="uid://bkjj6y3fd6p5d" path="res://scenes/main menu folder/main_menu.gd" id="1_yackh"]
+[ext_resource type="Texture2D" uid="uid://dl0dbc8y64aqn" path="res://assets/thumbnail/background_1280x720.png" id="2_skcuv"]
+[ext_resource type="FontFile" uid="uid://d28dum5g2r32b" path="res://assets/fonts/Square-Black.ttf" id="2_x8rar"]
+[ext_resource type="Texture2D" uid="uid://cr86mv4grgt5p" path="res://assets/images/UI/button_rectangle_depth_line.png" id="4_ot772"]
+[ext_resource type="Texture2D" uid="uid://duvq0htbbq87g" path="res://assets/images/UI/button_rectangle_line.png" id="5_y0yhd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wdxf4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5v0fm"]
+texture = ExtResource("4_ot772")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xbjs4"]
+texture = ExtResource("5_y0yhd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1fxv"]
+texture = ExtResource("4_ot772")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ada0p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ot772"]
+texture = ExtResource("4_ot772")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y0yhd"]
+texture = ExtResource("5_y0yhd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcuoo"]
+texture = ExtResource("4_ot772")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypnvn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p7e1i"]
+texture = ExtResource("4_ot772")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8wto6"]
+texture = ExtResource("5_y0yhd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_doecj"]
+texture = ExtResource("4_ot772")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yackh")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_skcuv")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wdxf4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -68.0
+offset_right = 211.0
+offset_bottom = 161.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("2_x8rar")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_5v0fm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xbjs4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_i1fxv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ada0p")
+text = "START GAME"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("2_x8rar")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_ot772")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_y0yhd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vcuoo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ypnvn")
+text = "OPTIONS
+"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("2_x8rar")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_p7e1i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8wto6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_doecj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ypnvn")
+text = "EXIT"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -365.0
+offset_top = -241.0
+offset_right = 362.0
+offset_bottom = -139.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_y = 50
+theme_override_fonts/font = ExtResource("2_x8rar")
+theme_override_font_sizes/font_size = 101
+text = "GODOT ADVENTURE"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Fade" type="ColorRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
